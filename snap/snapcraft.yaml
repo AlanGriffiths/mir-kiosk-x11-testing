@@ -117,9 +117,12 @@ layout:
     bind: $SNAP/etc/fonts
 
 plugs:
-  opengl:
-  wayland:
-  network-bind: # to serve X11
+  opengl:         # For Mir
+  wayland:        # For Mir
+  network-bind:   # For Mir (to serve X11)
+  camera:         # For Zoom
+  audio-playback: # For Zoom
+  audio-record:   # For Zoom
 
 environment:
   # Prep for Mir
