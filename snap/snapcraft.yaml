@@ -82,12 +82,6 @@ parts:
       sudo apt install --assume-yes libmiral-dev
       snapcraftctl pull
 
-  xwayland:
-    plugin: nil
-    stage-packages:
-      - xwayland
-      - libbz2-1.0
-
   mir-kiosk-x11:
     after: [ppa-setup]
     plugin: cmake
@@ -100,10 +94,11 @@ parts:
     stage-packages:
       - inotify-tools
       - libmiral4
-      #      - mir-graphics-drivers-desktop
       - mir-platform-graphics-wayland18
       - dmz-cursor-theme
       - fonts-freefont-ttf
+      - xwayland
+      - libbz2-1.0
 
   env-setup:
     plugin: dump
